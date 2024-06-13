@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import Roulette from "../widgets/Roulette.jsx";
 import {useState} from "react";
 
+
+
+
 function Page(){
     const [roulette, setRoulette] = useState(false);
 
@@ -30,15 +33,14 @@ function Page(){
                     </Metrica>
                 </BlockMetrica>
                 <h1>Что нам съесть на ужин: генератор блюд, когда очень лень</h1>
-                <button onClick={handleClick}>Click</button>
-                {roulette && <Roulette />}
+                <button onClick={handleClick} className="btn-spin">Великий рандом</button>
+                {roulette && <Roulette/>}
             </Wrapper>
         </>
     )
 }
 
 export default Page;
-
 
 
 const Header = styled.header`
