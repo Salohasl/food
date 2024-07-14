@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import Roulette from "../widgets/Roulette.jsx";
 import {useState} from "react";
 
-
-
-
 function Page(){
     const [roulette, setRoulette] = useState(false);
 
