@@ -17,7 +17,7 @@ function Roulette() {
     }, []);
 
     return (
-        <div>
+        <div className="data">
             {categories.map((category, index) => (
                 <div key={index} className="roulette-category">
                     <h3>{t(category.strCategory)}</h3>
