@@ -1,13 +1,7 @@
 import styled from 'styled-components';
-import Roulette from "../widgets/Roulette.jsx";
-import {useState} from "react";
+import {Button} from "../widgets/Button.jsx";
 
 function Page(){
-    const [roulette, setRoulette] = useState(false);
-
-    function handleClick(){
-        setRoulette(!roulette);
-    }
 
     const today = new Date();
     const ddMMyyyy = today.toLocaleDateString('ru-RU');
@@ -30,8 +24,7 @@ function Page(){
                     </Metrica>
                 </BlockMetrica>
                 <h1>Что нам съесть на ужин: генератор блюд, когда очень лень</h1>
-                <button onClick={handleClick} className="btn-spin">Великий рандом</button>
-                {roulette && <Roulette/>}
+                <Button />
             </Wrapper>
         </>
     )
