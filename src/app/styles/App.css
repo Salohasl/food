@@ -53,7 +53,7 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation: keysProd 5s linear infinite;
+    animation: keysProd 5s linear;
 }
 @keyframes keysProd {
     0%{
@@ -96,6 +96,5 @@ h1{
     transition: .5s;
 }
 .product-button button:hover{
-    transform: scale(1.2);
-    box-shadow: 1px 1px 15px black;
+    background: rgba(0,0,0,.8);
 }

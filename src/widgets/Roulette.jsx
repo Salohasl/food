@@ -1,30 +1,18 @@
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import {fetchCategories} from "../entities/product.js";
-
-
+import {useSelector} from "react-redux";
 
 function Roulette() {
-    const [categories, setCategories] = useState([]);
-    const { t } = useTranslation();
-
-    useEffect(() => {
-        async function fetchData() {
-            const data = await fetchCategories();
-            setCategories(data.categories);
-        }
-        fetchData();
-    }, []);
+    const products = useSelector((state) => state.product)
 
     return (
-        <div className="data">
-            {categories.map((category, index) => (
-                <div key={index} className="roulette-category">
-                    <h3>{t(category.strCategory)}</h3>
-                    <img src={category.strCategoryThumb} alt={category.strCategory} />
+        <>
+            {products.map(product => (
+                <div key={product.id} className="card">
+                    <h1>{ product.category }</h1>
+                    <p>Блюдо: {product.name}</p>
+                    <p>{product.description}</p>
                 </div>
             ))}
-        </div>
+        </>
     );
 }
 

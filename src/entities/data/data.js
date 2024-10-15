@@ -1,5 +1,4 @@
-{
-  "dishes": [
+export const initialState = [
     {
       "id": 1,
       "category": "Супы",
@@ -35,5 +34,4 @@
       "description": "Итальянский эспрессо.",
       "price": 100
     }
-  ]
-}
+]

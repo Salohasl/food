@@ -1,7 +1,7 @@
-# React + Vite + i18next(Translation eng-rus) app
+# React + Redux
 
 ## Для запуска используйте:
-# <code>npm i -> npm run dev </code>
+# ....
 
 ---
 

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import {Button} from "../widgets/Button.jsx";
+import Roulette from "../widgets/Roulette.jsx";
+import React from "react";
 
 function Page(){
 
@@ -9,7 +11,7 @@ function Page(){
     return(
         <>
             <Header>
-                <p>Помощник для Ягодки</p>
+                <p>Персональный помощник</p>
             </Header>
             <Wrapper>
                 <BlockMetrica>
@@ -23,8 +25,9 @@ function Page(){
                         <span>1</span>
                     </Metrica>
                 </BlockMetrica>
-                <h1>Что нам съесть на ужин: генератор блюд, когда очень лень</h1>
-                <Button />
+                <h1>Что приготовить: генератор блюд, когда очень лень</h1>
+                <Button/>
+                <Roulette/>
             </Wrapper>
         </>
     )
@@ -38,10 +41,10 @@ const Header = styled.header`
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    
+
 `;
 const Wrapper = styled.div`
-    color: rgb(0,0,0, .6);
+    color: rgb(0, 0, 0, .6);
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -55,7 +58,7 @@ const BlockMetrica = styled.div`
     width: 100%;
     gap: 20px;
 `;
-const Metrica= styled.div`
+const Metrica = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;

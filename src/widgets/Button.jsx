@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Roulette from './Roulette.jsx';
+import {Link} from "react-router-dom";
 
 export function Button() {
     const [roulette, setRoulette] = useState(false);
@@ -14,15 +14,16 @@ export function Button() {
         <div className="product-button">
             {buttonsVisible && (
                 <>
-                    <button onClick={handleClick}>Попроще и побыстрее</button>
-                    <button onClick={handleClick}>Настроение "Поваренок"</button>
-                    <button onClick={handleClick}>Режим "Здоровое питание"</button>
+                    <Link to="/products">
+                        <button onClick={handleClick}>Завтрак</button>
+                    </Link>
+                    <button onClick={handleClick}>Обед</button>
+                    <button onClick={handleClick}>Ужин</button>
                     <button onClick={handleClick}>Сегодня только доставка</button>
                     <button onClick={handleClick}>Хочется праздника</button>
                     <button onClick={handleClick}>Не пойму, чего хочется</button>
                 </>
             )}
-            {roulette && <Roulette />}
         </div>
     );
 }
